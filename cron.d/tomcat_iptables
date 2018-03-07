@@ -1,0 +1,2 @@
+#30 07 * * *    root    /sbin/iptables-restore < /etc/iptables_rules
+#30 19 * * *    root    /sbin/iptables -F

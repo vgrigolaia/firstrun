@@ -1,0 +1,10 @@
+service ftp
+{
+      disable = no
+      flags                   = REUSE
+      socket_type             = stream
+      wait                    = no
+      user                    = root
+      server                  = /usr/sbin/proftpd
+      server_args             = -c /etc/proftpd/proftpd.conf
+}
