@@ -64,11 +64,12 @@ fi
 
 ifup eth0
 
-wget -q --no-check-certificate -r --no-parent -A.deb https://yourdomainex.com/example/check_mk/agents/
-dpkg -Gi --force-confold yourdomainex.com/example/check_mk/agents/*.deb
-rm -rf yourdomainex.com/
-wget -q --no-check-certificate https://yourdomainex.com/example/check_mk/agents/plugins/mk_inventory.linux -O /usr/lib/check_mk_agent/plugins/mk_inventory
-chmod 755 /usr/lib/check_mk_agent/plugins/mk_inventory
+## Uncomment and edit it if you use OMD Check_MK Monitoring System 
+#wget -q --no-check-certificate -r --no-parent -A.deb https://yourdomainex.com/example/check_mk/agents/
+#dpkg -Gi --force-confold yourdomainex.com/example/check_mk/agents/*.deb
+#rm -rf yourdomainex.com/
+#wget -q --no-check-certificate https://yourdomainex.com/example/check_mk/agents/plugins/mk_inventory.linux -O /usr/lib/check_mk_agent/plugins/mk_inventory
+#chmod 755 /usr/lib/check_mk_agent/plugins/mk_inventory
 
 apt-get update && apt-get dist-upgrade -y && apt-get autoremove --purge -y && apt-get clean
 
